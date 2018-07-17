@@ -5,12 +5,12 @@ This is a simple examples to compare two images classification methods:
 	* Eigenimages (generalization of engenfaces)
 	* Neural Networks (just a plain NN). 
 
-##Prerequisites:
+## Prerequisites:
 
 	* TensorFlow 
 	* Sckit-learn
 
-##Content:  
+## Content:  
 
 
 	ImageProcessing  
