@@ -67,20 +67,18 @@ def ImageLoader(imagesPerCat, downsampling, colour, verticalEdge, horizontalEdge
     
     #Set the working directory
     os.getcwd()
-    os.chdir("/home/guido/NEU")
+    #os.chdir("/home/guido/NEU")
     
     ##loading trash images path
-    imgpathsTrash = glob.glob("./GitHub/Image_Analysis_in_Python/images/trash/*.JPEG")
-    imgpathsTrash = glob.glob("./DA 5030 Introduction to Data MiningMachine Learning/FinalProject/311pictures/Trash/*.jpg")
+    imgpathsTrash = glob.glob("./311pictures/Trash/*.jpg")
     
     
     ##loading grafiti images path
-    imgpathsGrafiti = glob.glob("./DA 5030 Introduction to Data MiningMachine Learning/FinalProject/311pictures/Grafiti/*.jpg")
+    imgpathsGrafiti = glob.glob("./311pictures/Grafiti/*.jpg")
     
     
     ##loading other images path
-    imgpathsOther = glob.glob("./DA 5030 Introduction to Data MiningMachine Learning/FinalProject/311pictures/Other/*.jpg")
-    
+    ##imgpathsOther = glob.glob("./DA 5030 Introduction to Data MiningMachine Learning/FinalProject/311pictures/Other/*.jpg")
     
     
     if imagesPerCat != 0 :
@@ -88,8 +86,6 @@ def ImageLoader(imagesPerCat, downsampling, colour, verticalEdge, horizontalEdge
         imgpathsGrafiti = imgpathsGrafiti[0:imagesPerCat]
         imgpathsOther = imgpathsOther[0:imagesPerCat]
     
-    
-    imgpaths = imgpathsTrash + imgpathsGrafiti + imgpathsOther
     imgpaths = imgpathsTrash + imgpathsGrafiti 
     
     
@@ -101,9 +97,9 @@ def ImageLoader(imagesPerCat, downsampling, colour, verticalEdge, horizontalEdge
         #return y as a verctor (better for SVM)
         y1 = np.zeros(len(imgpathsTrash))
         y2 = np.zeros(len(imgpathsGrafiti)) + 1
-        y3 = np.zeros(len(imgpathsOther)) + 2
+        #y3 = np.zeros(len(imgpathsOther)) + 2
         
-        y= np.concatenate((y1,y2, y3), axis=0)
+        #y= np.concatenate((y1,y2, y3), axis=0)
         y= np.concatenate((y1,y2), axis=0)
     
         print("Numer of images of category y1", y1.shape)

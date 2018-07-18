@@ -7,8 +7,18 @@ This is a simple examples to compare two images classification methods:
 
 ## Prerequisites:
 
-	* TensorFlow 
+	* TensorFlow https://www.tensorflow.org/install/
+
+	```
+		pip install --upgrade tensorflow
+	```
+
 	* Sckit-learn
+	
+	* Sckikit-image
+	```
+	pip install scikit-image
+	```
 
 ## Content:  
 
